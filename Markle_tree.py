@@ -39,3 +39,43 @@ class MerkleTree:
         
         left: Node = self.__buildTree(nodes[:half])
         right: Node = self.__buildTree(nodes[half:])
+
+        value: str = Node.hash(left.value + right.value)
+        content: str = f'{left.content} + {right.content}'
+
+        return Node(left, right, value, content)
+    
+    def printTree(self) -> None:
+        self.__printTreeRec(self.root)
+
+    def __printTreeRec(self, node: Node, level=0) -> None:
+        if node != None:
+            if node.left != None:
+                print("Left:" +str(node.left))
+                print("Right: "+str(node.right))
+            else:
+                print("Input")
+
+            if node.is_copied:
+                print("(padding)")
+            print("value: "+str(node.value))
+            print("content: "+str(node.content))
+            print("")
+            self.__printTreeRec(node.left)
+            self.__printTreeRec(node.right)
+
+    def getrootHash(self) -> str:
+        return self.root.value
+    
+def mixmarkletree() -> None:
+    elems = ["Medicaps CFI", "A", "computer", "science", "portal", "for", "students"]
+
+    print("Inputs: ")
+    print(*elems, sep=" | ")
+    print("")
+    mtree = MerkleTree(elems)
+    print("Root Hash: "+mtree.getrootHash()+"\n")
+    mtree.printTree()
+
+
+mixmarkletree()
