@@ -74,8 +74,8 @@ class MerkleTree:
         return self.root.value
 
 def mixmerkletree() -> None:
-    elems = ["Medicaps CFI", "A", "Computer",
-             "Science", "Portal", "For", "Students"]
+    elems = ["Welcome to", "Medicaps", "University",
+             "Science", "Collage", "For", "Students"]
     # as there are odd number of inputs, the last input is repeated
     print("Inputs: ")
     print(*elems, sep=" | ")
