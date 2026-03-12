@@ -47,7 +47,7 @@ bitcoin_address = base58.b58encode(address_bytes)
 print("\nBitcoin Address:")
 print(bitcoin_address.decode())
 
-#Generate QR Codes...ok vinit
+#Generate QR Codes...ok vinit.........
 private_qr = qrcode.make(private_key_hex)
 private_qr.save("private_key_qr.png")
 
