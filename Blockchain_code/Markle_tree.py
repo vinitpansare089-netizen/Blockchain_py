@@ -1,4 +1,3 @@
-# Python code for implementing Merkle Tree
 from typing import List
 import hashlib
 
