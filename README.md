@@ -1,9 +1,6 @@
 # Blockchain_py
 
 A simple Python project to understand **core blockchain and cryptography concepts** by implementing them from scratch.
-
-This project demonstrates how Bitcoin-style addresses are generated using **ECDSA cryptography, hashing, and Base58 encoding**, along with basic blockchain data structures like **Merkle Trees**.
-
 ---
 
 # Project Goals
