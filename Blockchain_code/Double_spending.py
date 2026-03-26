@@ -22,3 +22,14 @@ class Blockchain:
         else:
             print(f'Failed: Double Spend Attempt by {transaction.sender}')  
             return False
+        
+
+my_coin = Blockchain()
+
+tx1 = Transaction("vivek", "vinit", 100)
+my_coin.add_transaction(tx1)
+
+tx2 = Transaction("vivek", "rohit", 100)
+my_coin.add_transaction(tx2) 
+
+print(f"\nFinal Balances: {my_coin.balances}")
