@@ -1,6 +1,6 @@
 let contract;
 
-const address = "0x5B38Da6a701c568545dCfcB03FcB875f56beddC4";
+const address = "0xD44B8519193667757dF52EE6F50BfDBAa0E7609C";
 
 const abi = [
   "function setMessage(string)",
