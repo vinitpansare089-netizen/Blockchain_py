@@ -188,4 +188,4 @@ Possible extensions:
 
 This project is for educational and learning purposes.
 
-Created by VINIT
+Created by VINIT (Trinovous)
