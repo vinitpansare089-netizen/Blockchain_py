@@ -16,6 +16,7 @@ class UTXO:
             total_input_value += coin.amount
             if total_input_value >= amount_to_send:
                 break
+
         if total_input_value < amount_to_send:
             return "Insufficient funds!"
         
@@ -25,4 +26,19 @@ class UTXO:
         change = total_input_value - amount_to_send
         if change > 0:
             outputs.append(UTXO('TX99_B', change, self.owner))
-        return outputs
+
+        return {
+            "spent_ids": [coin.tx_id for coin in input_utxos],
+            "new_utxos": outputs
+        }
+
+# Wallet
+wallet = [UTXO('TX01', 5, 'Alice'), UTXO('TX02', 3, 'Alice')]
+
+print(f"Alice's wallet: {wallet}")
+
+tx = wallet[0].create_transaction("Bob", 6, wallet)
+
+print(f"\nTransaction processed:")
+print(f"Spent UTXOs: {tx['spent_ids']}")
+print(f"New UTXOs: {tx['new_utxos']}")
