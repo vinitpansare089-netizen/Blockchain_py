@@ -21,3 +21,8 @@ class UTXO:
         
         outputs = []
         outputs.append(UTXO('TX99_A', amount_to_send, receiver))
+
+        change = total_input_value - amount_to_send
+        if change > 0:
+            outputs.append(UTXO('TX99_B', change, self.owner))
+        return outputs
