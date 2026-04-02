@@ -157,6 +157,12 @@ base58
 ```
 
 These are listed in **requirements.txt**.
+base58==2.1.1
+colorama==0.4.6
+ecdsa==0.19.1
+pillow==12.1.1
+qrcode==8.2
+six==1.17.0
 
 ---
 
